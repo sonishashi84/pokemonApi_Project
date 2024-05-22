@@ -1,7 +1,4 @@
-.pokemon-container{
-    border: 1px solid grey;
-}
-.pokemon-wrapper{
+.pokemon-single{
     margin: 0 auto;
     display: flex;
     flex-direction: row;

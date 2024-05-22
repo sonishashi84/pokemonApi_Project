@@ -1,13 +1,15 @@
 import React from 'react';
 
-function Pokemon({ name, image }) {
+function PokemonOne({ name, image }) {
   return (
     <>
-      <div>{name}</div>
-      <div>
-        <img src={image} />
+      <div className="pokemon-single">
+        <div>{name}</div>
+        <div>
+          <img src={image} />
+        </div>
       </div>
     </>
   );
 }
-export default Pokemon;
+export default PokemonOne;

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Pokemon from '../pokemon/Pokemon'
+
+import PokemonOne from '../pokemon/Pokemon'
 import axios from 'axios';
 function PokemonList() {
     const [apiData, setapiData] = useState([]);
@@ -28,9 +29,15 @@ function PokemonList() {
   }, []);
   return (
     <>
-    <p>{isLoading ? 'Api downloading...' : 
-    apiData.map((item) => <Pokemon name={item.name} image={item.image} key={item.id} />)
-    }</p>
+<div className='pokemon-wrapper'>
+{isLoading ? 'Api downloading...' : 
+    apiData.map((item) => <PokemonOne name={item.name} image={item.image} key={item.id} />)
+    }
+</div>
+<div className=''>
+        <button>Prev</button>
+        <button>Next</button>
+    </div>
     </>
   );
 }
